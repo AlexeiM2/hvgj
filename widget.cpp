@@ -4,7 +4,7 @@
 #include <QTextStream>
 #include <QDebug>
 #include <QMessageBox>
-#include <pantalla1.h>
+#include <pantalla_principal.h>
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
@@ -13,7 +13,7 @@ Widget::Widget(QWidget *parent)
     ui->txtpasword->setEchoMode(QLineEdit::Password);
     QFile archivo;
     QTextStream io;
-    QString nombreArchivo="/home/diegocaviedes/usuarios.csv";
+    QString nombreArchivo="/home/administrador/proyectos/Proyecto-finanzas-familiares/usuarios.csv";
     archivo.setFileName(nombreArchivo);//se indicaca el archico con el cual se va trabajar
     archivo.open(QIODevice::ReadOnly | QIODevice::Text);
     //verificar si el archivo se habre
@@ -53,7 +53,7 @@ void Widget::on_btnacceder_clicked()
     }
     if (encontrado){
         qDebug()<<"Ok usuario registrado";
-        pantalla1 *ventana1 = new pantalla1(ui->txtusuario->text());
+        Pantalla_principal *ventana1 = new Pantalla_principal(ui->txtusuario->text());
         ventana1->setWindowModality(Qt::ApplicationModal);
         ventana1->show();
     }else{
@@ -70,7 +70,7 @@ void Widget::on_btnacceder2_clicked()
 {
     QFile archivo;
     QTextStream io;
-   QString nombreArchivo="/home/diegocaviedes/usuarios.csv";
+    QString nombreArchivo="/home/administrador/proyectos/Proyecto-finanzas-familiares/usuarios.csv";
     archivo.setFileName(nombreArchivo);//se indicaca el archico con el cual se va trabajar
     archivo.open(QIODevice::ReadOnly | QIODevice::Text);
     //verificar si el archivo se habre
@@ -94,7 +94,7 @@ void Widget::on_btnacceder2_clicked()
     archivo.close();
     if (encontrado){
         qDebug()<<"Ok usuario registrado";
-        pantalla1 *ventana1 = new pantalla1(ui->txtusuario->text());
+        Pantalla_principal *ventana1 = new Pantalla_principal(ui->txtusuario->text());
         ventana1->setWindowModality(Qt::ApplicationModal);
         ventana1->show();
     }else{

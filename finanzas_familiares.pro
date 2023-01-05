@@ -10,26 +10,20 @@ CONFIG += c++11
 
 SOURCES += \
     acerca.cpp \
-    agregar_categoria.cpp \
-    dialog.cpp \
     main.cpp \
-    pantalla1.cpp \
+    pantalla_principal.cpp \
     usuario.cpp \
     widget.cpp
 
 HEADERS += \
     acerca.h \
-    agregar_categoria.h \
-    dialog.h \
-    pantalla1.h \
+    pantalla_principal.h \
     usuario.h \
     widget.h
 
 FORMS += \
-    agregar_categoria.ui \
-    dialog.ui \
-    pantalla1.ui \
     acerca.ui \
+    pantalla_principal.ui \
     widget.ui
 
 # Default rules for deployment.
