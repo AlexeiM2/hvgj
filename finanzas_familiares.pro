@@ -10,6 +10,8 @@ CONFIG += c++11
 
 SOURCES += \
     acerca.cpp \
+    agregar_categoria.cpp \
+    dialog.cpp \
     main.cpp \
     pantalla1.cpp \
     usuario.cpp \
@@ -17,11 +19,15 @@ SOURCES += \
 
 HEADERS += \
     acerca.h \
+    agregar_categoria.h \
+    dialog.h \
     pantalla1.h \
     usuario.h \
     widget.h
 
 FORMS += \
+    agregar_categoria.ui \
+    dialog.ui \
     pantalla1.ui \
     acerca.ui \
     widget.ui
