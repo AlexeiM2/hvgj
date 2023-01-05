@@ -49,6 +49,10 @@
          </property>
          <item>
           <widget class="QPushButton" name="pushButton">
+           <property name="styleSheet">
+            <string notr="true">background-image: url(:/img/bg/ac.webp);
+border-color: rgb(0, 0, 0);</string>
+           </property>
            <property name="text">
             <string>Ingresar/Egresar</string>
            </property>
@@ -56,6 +60,10 @@
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_2">
+           <property name="styleSheet">
+            <string notr="true">background-image: url(:/img/bg/ac.webp);
+border-color: rgb(0, 0, 0);</string>
+           </property>
            <property name="text">
             <string>Reporte</string>
            </property>
@@ -63,6 +71,10 @@
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_3">
+           <property name="styleSheet">
+            <string notr="true">background-image: url(:/img/bg/ac.webp);
+border-color: rgb(0, 0, 0);</string>
+           </property>
            <property name="text">
             <string>Agregar Miembro</string>
            </property>
@@ -70,6 +82,10 @@
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_4">
+           <property name="styleSheet">
+            <string notr="true">background-image: url(:/img/bg/ac.webp);
+border-color: rgb(0, 0, 0);</string>
+           </property>
            <property name="text">
             <string>Agregar Categoria</string>
            </property>
@@ -142,7 +158,7 @@
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">

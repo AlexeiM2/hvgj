@@ -18,6 +18,9 @@ public:
 
     ~Pantalla_principal();
 
+private slots:
+    void on_pushButton_4_clicked();
+
 private:
     Ui::Pantalla_principal *ui;
     QString usuario1;
