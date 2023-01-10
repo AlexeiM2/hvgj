@@ -42,9 +42,9 @@ Widget::~Widget()
 
 void Widget::on_btnacceder_clicked()
 {
-    Pantalla_principal *ventana1 = new Pantalla_principal(ui->txtusuario->text());
-    ventana1->setWindowModality(Qt::ApplicationModal);
-    ventana1->show();
+    //Pantalla_principal *ventana1 = new Pantalla_principal(ui->txtusuario->text());
+    //ventana1->setWindowModality(Qt::ApplicationModal);
+    //ventana1->show();
     bool encontrado=false;
     for(int i=0; i<m_usuario.size();i++){
         //qDebug()<<m_usuario.at(i)->getUser()<<" - "<<m_usuario[i]->getClave();
