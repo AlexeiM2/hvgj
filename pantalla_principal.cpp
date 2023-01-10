@@ -1,6 +1,7 @@
 #include "pantalla_principal.h"
 #include "ui_pantalla_principal.h"
-#include "agregar_categoria.h"
+#include "personadialog.h"
+#include "principal.h"
 #include <QMessageBox>
 #include <QDebug>
 Pantalla_principal::Pantalla_principal(QString usuario, QWidget *parent) :
@@ -19,8 +20,8 @@ Pantalla_principal::~Pantalla_principal()
 
 void Pantalla_principal::on_pushButton_4_clicked()
 {
-    Agregar_categoria *ventana2 = new Agregar_categoria;
-    ventana2->setWindowModality(Qt::ApplicationModal);
-    ventana2->show();
+    Principal *ventana1 = new Principal;
+    ventana1->setWindowModality(Qt::ApplicationModal);
+    ventana1->show();
 }
 

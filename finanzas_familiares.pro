@@ -10,23 +10,28 @@ CONFIG += c++11
 
 SOURCES += \
     acerca.cpp \
-    agregar_categoria.cpp \
     main.cpp \
     pantalla_principal.cpp \
+    persona.cpp \
+    personadialog.cpp \
+    principal.cpp \
     usuario.cpp \
     widget.cpp
 
 HEADERS += \
     acerca.h \
-    agregar_categoria.h \
     pantalla_principal.h \
+    persona.h \
+    personadialog.h \
+    principal.h \
     usuario.h \
     widget.h
 
 FORMS += \
     acerca.ui \
-    agregar_categoria.ui \
     pantalla_principal.ui \
+    personadialog.ui \
+    principal.ui \
     widget.ui
 
 # Default rules for deployment.
@@ -36,6 +41,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     icons.qrc \
+    icons.qrc \
+    images.qrc \
     images.qrc
 
-DISTFILES +=
+DISTFILES += \
+    finanzas_familiares.pro.user \
+    finanzas_familiares.pro.user.4965401 \
+    usuarios.csv
