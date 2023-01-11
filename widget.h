@@ -21,6 +21,8 @@ private slots:
 
     void on_btnacceder2_clicked();
 
+    void on_btnregistrarse_clicked();
+
 
 private:
     Ui::Widget *ui;

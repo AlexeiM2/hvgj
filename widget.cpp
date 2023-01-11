@@ -5,6 +5,8 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <pantalla_principal.h>
+#include <register.h>
+
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
@@ -13,7 +15,7 @@ Widget::Widget(QWidget *parent)
     ui->txtpasword->setEchoMode(QLineEdit::Password);
     QFile archivo;
     QTextStream io;
-    QString nombreArchivo="/home/administrador/proyectos/Proyecto-finanzas-familiares/usuarios.csv";
+    QString nombreArchivo=":/usuarios.csv";
     archivo.setFileName(nombreArchivo);//se indicaca el archico con el cual se va trabajar
     archivo.open(QIODevice::ReadOnly | QIODevice::Text);
     //verificar si el archivo se habre
@@ -66,7 +68,13 @@ void Widget::on_btnacceder_clicked()
 
 }
 
+void Widget::on_btnregistrarse_clicked()
+{
+    Register *ventana1= new Register;
+    ventana1->setWindowModality(Qt::ApplicationModal);
+    ventana1->show();
 
+}
 
 
 void Widget::on_btnacceder2_clicked()
@@ -74,7 +82,7 @@ void Widget::on_btnacceder2_clicked()
 
     QFile archivo;
     QTextStream io;
-    QString nombreArchivo="/home/administrador/proyectos/Proyecto-finanzas-familiares/usuarios.csv";
+    QString nombreArchivo=":/usuarios.csv";
     archivo.setFileName(nombreArchivo);//se indicaca el archico con el cual se va trabajar
     archivo.open(QIODevice::ReadOnly | QIODevice::Text);
     //verificar si el archivo se habre

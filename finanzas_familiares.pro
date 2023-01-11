@@ -13,6 +13,7 @@ SOURCES += \
     agregar_miembro.cpp \
     main.cpp \
     pantalla_principal.cpp \
+    register.cpp \
     usuario.cpp \
     widget.cpp
 
@@ -20,6 +21,7 @@ HEADERS += \
     acerca.h \
     agregar_miembro.h \
     pantalla_principal.h \
+    register.h \
     usuario.h \
     widget.h
 
@@ -27,6 +29,7 @@ FORMS += \
     acerca.ui \
     agregar_miembro.ui \
     pantalla_principal.ui \
+    register.ui \
     widget.ui
 
 # Default rules for deployment.
@@ -35,6 +38,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    file.qrc \
     icons.qrc \
     images.qrc
 

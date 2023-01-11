@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>usuarios.csv</file>
+    </qresource>
+</RCC>
