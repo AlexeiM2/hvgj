@@ -11,8 +11,10 @@ CONFIG += c++11
 SOURCES += \
     acerca.cpp \
     agregar_miembro.cpp \
+    dialog_miembro.cpp \
     main.cpp \
     mi_perfil.cpp \
+    miembro_f.cpp \
     pantalla_principal.cpp \
     register.cpp \
     usuario.cpp \
@@ -21,7 +23,9 @@ SOURCES += \
 HEADERS += \
     acerca.h \
     agregar_miembro.h \
+    dialog_miembro.h \
     mi_perfil.h \
+    miembro_f.h \
     pantalla_principal.h \
     register.h \
     usuario.h \
@@ -30,6 +34,7 @@ HEADERS += \
 FORMS += \
     acerca.ui \
     agregar_miembro.ui \
+    dialog_miembro.ui \
     mi_perfil.ui \
     pantalla_principal.ui \
     register.ui \
