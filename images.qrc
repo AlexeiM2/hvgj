@@ -7,5 +7,6 @@
         <file>img/bg/ac.jpg</file>
         <file>img/bg/bglogin.jpg</file>
         <file>img/bg/background.png</file>
+        <file>sources/img/bg/bgperfil.jpg</file>
     </qresource>
 </RCC>

@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>Salarios</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/img/icons/icon.ico</normaloff>:/img/icons/icon.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
@@ -158,7 +162,7 @@ border-color: rgb(0, 0, 0);</string>
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">
@@ -179,8 +183,15 @@ border-color: rgb(0, 0, 0);</string>
     </property>
     <addaction name="actionAcerca_de"/>
    </widget>
+   <widget class="QMenu" name="menuUsuario">
+    <property name="title">
+     <string>Usuario</string>
+    </property>
+    <addaction name="actionMi_perfil"/>
+   </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuAyuda"/>
+   <addaction name="menuUsuario"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -239,7 +250,14 @@ border-color: rgb(0, 0, 0);</string>
     <string>Acerca de Salarios</string>
    </property>
   </action>
+  <action name="actionMi_perfil">
+   <property name="text">
+    <string>Mi perfil</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

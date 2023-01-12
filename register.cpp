@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <widget.h>
+#include <ui_register.h>
 
 Register::Register(QWidget *parent) :
     QWidget(parent),
@@ -20,6 +21,7 @@ Register::~Register()
 
 void Register::on_btncuenta_clicked()
 {
+    close();
     Widget *ventana1= new Widget;
     ventana1->setWindowModality(Qt::ApplicationModal);
     ventana1->show();

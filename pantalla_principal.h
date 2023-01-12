@@ -23,6 +23,13 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_actionSalir_triggered();
+
+    void on_actionAcerca_de_triggered();
+
+    void on_actionMi_perfil_triggered();
+
+
 private:
     Ui::Pantalla_principal *ui;
     QString usuario1;

@@ -12,6 +12,7 @@ SOURCES += \
     acerca.cpp \
     agregar_miembro.cpp \
     main.cpp \
+    mi_perfil.cpp \
     pantalla_principal.cpp \
     register.cpp \
     usuario.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     acerca.h \
     agregar_miembro.h \
+    mi_perfil.h \
     pantalla_principal.h \
     register.h \
     usuario.h \
@@ -28,6 +30,7 @@ HEADERS += \
 FORMS += \
     acerca.ui \
     agregar_miembro.ui \
+    mi_perfil.ui \
     pantalla_principal.ui \
     register.ui \
     widget.ui

@@ -21,6 +21,7 @@ Widget::Widget(QWidget *parent)
     //verificar si el archivo se habre
     if(!archivo.isOpen()){
         QMessageBox::information(this,"Error",archivo.errorString());
+        close();
         return;
     }
     //QString user, password;
@@ -53,6 +54,7 @@ void Widget::on_btnacceder_clicked()
         if(ui->txtusuario->text()==m_usuario.at(i)->getUser() &&
            ui->txtpasword->text()==m_usuario[i]->getClave()){
                 encontrado=true;
+                close();
                 break;
         }
     }
@@ -70,6 +72,7 @@ void Widget::on_btnacceder_clicked()
 
 void Widget::on_btnregistrarse_clicked()
 {
+    close();
     Register *ventana1= new Register;
     ventana1->setWindowModality(Qt::ApplicationModal);
     ventana1->show();

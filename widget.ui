@@ -189,7 +189,7 @@ color:rgba(0, 0, 0, 240);
 padding-bottom:7px;</string>
     </property>
     <property name="text">
-     <string/>
+     <string>Administrador</string>
     </property>
     <property name="placeholderText">
      <string>Usuario</string>
@@ -217,7 +217,7 @@ color:rgba(0, 0, 0, 240);
 padding-bottom:7px;</string>
     </property>
     <property name="text">
-     <string/>
+     <string>admin</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
