@@ -6,7 +6,7 @@ Agregar_miembro::Agregar_miembro(QWidget *parent) :
     ui(new Ui::Agregar_miembro)
 {
     ui->setupUi(this);
-    setWindowTitle("Agenda telefónica");
+    setWindowTitle("Miembros de la familia");
     // Configurar la tabla
     //ui->tblLista->setColumnCount(4);
     ui->tbtLista->setColumnCount(4);

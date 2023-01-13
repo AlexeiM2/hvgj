@@ -48,8 +48,10 @@
        <widget class="QLabel" name="rol_label">
         <property name="font">
          <font>
-          <family>Impact</family>
+          <family>Samyak Tamil</family>
           <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
@@ -65,8 +67,10 @@ color: rgb(31, 31, 31);</string>
        <widget class="QLabel" name="nombrelabel_4">
         <property name="font">
          <font>
-          <family>Impact</family>
+          <family>Sans</family>
           <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="text">
@@ -78,8 +82,10 @@ color: rgb(31, 31, 31);</string>
        <widget class="QLabel" name="apellidolabel_3">
         <property name="font">
          <font>
-          <family>Impact</family>
+          <family>Sans</family>
           <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="text">
@@ -91,8 +97,10 @@ color: rgb(31, 31, 31);</string>
        <widget class="QLabel" name="edad_2">
         <property name="font">
          <font>
-          <family>Impact</family>
+          <family>Sans</family>
           <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="text">
