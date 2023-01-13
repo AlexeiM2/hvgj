@@ -28,22 +28,18 @@ Dialog_miembro::~Dialog_miembro()
 
 void Dialog_miembro::on_buttonBox_accepted()
 {
-    /*if(ui->Innombre->hasAcceptableInput()){
-      QString nombre = ui->Innombre->text();
-      QString apellido = ui->Inapellido->text();
-      QString edad = ui->Inedad->text();
-      this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
-    }else{
-        QMessageBox::information(this,"Guarde!!! datos",
-                             "No se puede agregar datos vacios");
-    }
-    */
-    // me valida pero cierra el programa ;((
     QString rol = ui->Inrol->currentText();
-    QString nombre = ui->Innombre->text();
-    QString apellido = ui->Inapellido->text();
-    QString edad = ui->Inedad->text();
-    this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
+        if(ui->Innombre->isModified() and ui->Inapellido->isModified() and ui->Inedad->value()){
+            QString nombre = ui->Innombre->text();
+            QString apellido = ui->Inapellido->text();
+            QString edad = ui->Inedad->text();
+            this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
+          }else{
+
+            QMessageBox::warning(this,"ERROR!!!",
+                                 "No se puede agregar datos invalidos");
+            reject();// esto hace que no se cierre el programa feli ;)
+        }
 
 }
 
