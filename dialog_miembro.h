@@ -2,6 +2,7 @@
 #define DIALOG_MIEMBRO_H
 
 #include <QDialog>
+#include <QMessageBox>
 #include"miembro_f.h"
 
 namespace Ui {
