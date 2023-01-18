@@ -28,18 +28,24 @@ Dialog_miembro::~Dialog_miembro()
 
 void Dialog_miembro::on_buttonBox_accepted()
 {
-    QString rol = ui->Inrol->currentText();
-        if(ui->Innombre->isModified() and ui->Inapellido->isModified() and ui->Inedad->value()){
-            QString nombre = ui->Innombre->text();
-            QString apellido = ui->Inapellido->text();
-            QString edad = ui->Inedad->text();
-            this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
-          }else{
 
-            QMessageBox::warning(this,"ERROR!!!",
-                                 "No se puede agregar datos invalidos");
-            reject();// esto hace que no se cierre el programa feli ;)
-        }
+    QString rol = ui->Inrol->currentText();
+    if(rol.isEmpty()){
+        return ;
+    }
+    QString nombre = ui->Innombre->text();
+    if(nombre.isEmpty()){
+        return ;
+    }
+    QString apellido = ui->Inapellido->text();
+    if(apellido.isEmpty()){
+        return ;
+    }
+    QString edad = ui->Inedad->text();
+    if(edad.isEmpty()){
+        return ;
+    }
+    this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
 
 }
 

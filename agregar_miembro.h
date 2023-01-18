@@ -5,6 +5,7 @@
 #include <QFile>
 #include <QMessageBox>
 #include <QTextStream>
+#include <QTableWidgetItem>
 #include "dialog_miembro.h"
 #include "miembro_f.h"
 
@@ -28,9 +29,17 @@ private slots:
 
     void on_buttonBox_rejected();
 
+    void on_btneliminar_clicked();
+
+    void on_tbtLista_itemClicked(QTableWidgetItem *item);
+
+    void on_btnmodificar_clicked();
+
 private:
     Ui::Agregar_miembro *ui;
     const QString ARCHIVO = "miembros.csv";
+    int m_u;
+    int m_f;
     enum Columna
     {
         ROL, NOMBRE, APELLIDO, EDAD

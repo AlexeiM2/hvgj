@@ -1,12 +1,27 @@
 #include "agregar_miembro.h"
 #include "ui_agregar_miembro.h"
+#include <QRegExpValidator>
+#include <QtCore>
+#include <QtGui>
+
+#define NOMBRE_RX "([a-zA-Z',.-]+( [a-zA-Z',.-]+)*){2,30}"
+#define EDAD_RX "([0-9]+( [0-9]+)*){1,10}"
 
 Agregar_miembro::Agregar_miembro(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Agregar_miembro)
 {
+    m_u=0;
+    m_f=-1;
     ui->setupUi(this);
-    setWindowTitle("Miembros de la familia");
+    QRegExp rxNombre(NOMBRE_RX) , rxApellido(NOMBRE_RX),rxTelefono(EDAD_RX);
+    QRegExpValidator *valinombre =new QRegExpValidator(rxNombre,this);
+    QRegExpValidator *valiapellido =new QRegExpValidator(rxApellido,this);
+    QRegExpValidator *valiedad = new QRegExpValidator(rxTelefono, this);
+    ui->Innombre->setValidator(valinombre);
+    ui->Inapellido->setValidator(valiapellido);
+    ui->Inedad->setValidator(valiedad);
+    setWindowTitle("Agenda telefónica");
     // Configurar la tabla
     //ui->tblLista->setColumnCount(4);
     ui->tbtLista->setColumnCount(4);
@@ -105,5 +120,39 @@ void Agregar_miembro::on_buttonBox_accepted()
 void Agregar_miembro::on_buttonBox_rejected()
 {
     reject();
+}
+
+
+void Agregar_miembro::on_btneliminar_clicked()
+{
+    ui->tbtLista->removeRow(m_f);
+
+}
+
+
+void Agregar_miembro::on_tbtLista_itemClicked(QTableWidgetItem *item)
+{
+     m_f= item->row();
+     QTableWidgetItem *rol =ui->tbtLista->item(m_f,0);
+     QTableWidgetItem *nombre =ui->tbtLista->item(m_f,1);
+     QTableWidgetItem *apellido =ui->tbtLista->item(m_f,2);
+     QTableWidgetItem *edad =ui->tbtLista->item(m_f,3);
+
+     ui->Inrol->currentTextChanged(rol->text());
+     ui->Innombre->setText(nombre->text());
+     ui->Inapellido->setText(apellido->text());
+     ui->Inedad->setText(edad->text());
+
+}
+
+
+void Agregar_miembro::on_btnmodificar_clicked()
+{
+    ui->tbtLista->setItem(m_f,0,new QTableWidgetItem(ui->Inrol->currentText()));
+    ui->tbtLista->setItem(m_f,1,new QTableWidgetItem(ui->Innombre->text()));
+    ui->tbtLista->setItem(m_f,2,new QTableWidgetItem(ui->Inapellido->text()));
+    ui->tbtLista->setItem(m_f,3,new QTableWidgetItem(ui->Inedad->text()));
+
+
 }
 
