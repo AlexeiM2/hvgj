@@ -51,25 +51,6 @@ void Dialog_miembro::on_btnguardar_clicked()
         this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
         accept();
     }
-
-
-    /*
-    QString rol = ui->Inrol->currentText();
-    if(ui->Innombre->isModified() and ui->Inapellido->isModified() and ui->Inedad->value()){
-               QString nombre = ui->Innombre->text();
-               QString apellido = ui->Inapellido->text();
-               QString edad = ui->Inedad->text();
-               this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
-               accept();
-
-             }else{
-
-               QMessageBox::warning(this,"ERROR!!!",
-                                    "No se puede agregar datos invalidos");
-
-           }
-*/
-
 }
 
 
