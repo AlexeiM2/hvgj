@@ -26,35 +26,7 @@ Dialog_miembro::~Dialog_miembro()
     delete ui;
 }
 
-void Dialog_miembro::on_buttonBox_accepted()
-{
 
-    QString rol = ui->Inrol->currentText();
-    if(rol.isEmpty()){
-        return ;
-    }
-    QString nombre = ui->Innombre->text();
-    if(nombre.isEmpty()){
-        return ;
-    }
-    QString apellido = ui->Inapellido->text();
-    if(apellido.isEmpty()){
-        return ;
-    }
-    QString edad = ui->Inedad->text();
-    if(edad.isEmpty()){
-        return ;
-    }
-    this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
-
-}
-
-
-void Dialog_miembro::on_buttonBox_rejected()
-{
-    reject();
-
-}
 
 Miembro_f *Dialog_miembro::miembro() const
 {
@@ -62,4 +34,47 @@ Miembro_f *Dialog_miembro::miembro() const
 
 }
 
+
+
+void Dialog_miembro::on_btnguardar_clicked()
+{
+
+    QString rol = ui->Inrol->currentText();
+    QString nombre = ui->Innombre->text();
+    QString apellido = ui->Inapellido->text();
+    QString edad = ui->Inedad->text();
+    if(nombre.isEmpty() or apellido.isEmpty() or edad.isEmpty()){
+        QMessageBox::warning(this,"ERROR!!!",
+                             "No se puede agregar datos invalidos");
+
+    }else{
+        this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
+        accept();
+    }
+
+
+    /*
+    QString rol = ui->Inrol->currentText();
+    if(ui->Innombre->isModified() and ui->Inapellido->isModified() and ui->Inedad->value()){
+               QString nombre = ui->Innombre->text();
+               QString apellido = ui->Inapellido->text();
+               QString edad = ui->Inedad->text();
+               this->m_miembro = new Miembro_f(rol,nombre, apellido, edad);
+               accept();
+
+             }else{
+
+               QMessageBox::warning(this,"ERROR!!!",
+                                    "No se puede agregar datos invalidos");
+
+           }
+*/
+
+}
+
+
+void Dialog_miembro::on_btncancel_clicked()
+{
+    reject();
+}
 

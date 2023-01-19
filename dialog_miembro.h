@@ -19,11 +19,10 @@ public:
     ~Dialog_miembro();
 
 private slots:
-    void on_buttonBox_accepted();
 
-    void on_buttonBox_rejected();
+    void on_btnguardar_clicked();
 
-
+    void on_btncancel_clicked();
 
 private:
     Ui::Dialog_miembro *ui;
