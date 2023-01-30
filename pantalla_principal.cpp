@@ -22,9 +22,9 @@ Pantalla_principal::~Pantalla_principal()
 
 void Pantalla_principal::on_pushButton_3_clicked()
 {
-    Agregar_miembro *ventana1= new Agregar_miembro;
-    ventana1->setWindowModality(Qt::ApplicationModal);
-    ventana1->show();
+    Agregar_miembro *ventana2= new Agregar_miembro;
+    ventana2->setWindowModality(Qt::ApplicationModal);
+    ventana2->show();
 }
 
 void Pantalla_principal::on_actionSalir_triggered()
@@ -51,9 +51,9 @@ void Pantalla_principal::on_actionAcerca_de_triggered()
 void Pantalla_principal::on_actionMi_perfil_triggered()
 {
     close();
-    Mi_perfil *ventana1= new Mi_perfil;
-    ventana1->setWindowModality(Qt::ApplicationModal);
-    ventana1->show();
+    Mi_perfil *ventana3= new Mi_perfil;
+    ventana3->setWindowModality(Qt::ApplicationModal);
+    ventana3->show();
 
 }
 

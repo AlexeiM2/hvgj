@@ -18,6 +18,8 @@ public:
 private slots:
     void on_btnsalir_clicked();
 
+    void on_btnregresar_clicked();
+
 private:
     Ui::Mi_perfil *ui;
 };
